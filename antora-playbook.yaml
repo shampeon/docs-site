@@ -1,0 +1,17 @@
+site:
+  title: Ian Evans
+  url: https://docs.techne.net
+  start_page: resume-component::resume.adoc
+content:
+  sources:
+  - url: https://github.com/shampeon/resume-component.git
+ui:
+  bundle:
+    # url: ../antora-ui/build/ui-bundle.zip
+    url: https://github.com/shampeon/antora-ui/releases/download/nightly/ui-bundle.zip
+  # supplemental_files: ./supplemental_ui
+  # default_layout: default-dev
+antora:
+  extensions:
+  - '@antora/lunr-extension'
+
