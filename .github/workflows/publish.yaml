@@ -1,0 +1,32 @@
+name: Publish site
+on:
+  push:
+    branches: [main]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/Iron'
+      - name: Install Antora
+        run: npm i antora
+      - name: Generate Site
+        run: npx antora antora-playbook.yml
+      - name: rsync deployment
+        uses: burnett01/rsync-deployments@6.0.0
+        switches: -avzr --delete
+        path: build/site/
+        remote_path: ${{ secrets.DEPLOY_PATH }}
+        remote_host: ${{ secrets.DEPLOY_HOST }}
+        remote_port: ${{ secrets.DEPLOY_PORT }}
+        remote_user: ${{ secrets.DEPLOY_USER }}
+        remote_key: ${{ secrets.DEPLOY_KEY }}
+        
