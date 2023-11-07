@@ -1,5 +1,5 @@
 site:
-  title: Ian Evans
+  title: docs.techne.net
   url: https://docs.techne.net
   start_page: resume-component::resume.adoc
 content:
