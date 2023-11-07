@@ -19,7 +19,7 @@ jobs:
       - name: Install Antora
         run: npm i antora
       - name: Generate Site
-        run: npx antora antora-playbook.yml
+        run: npx antora antora-playbook.yaml
       - name: rsync deployment
         uses: burnett01/rsync-deployments@6.0.0
         with:
