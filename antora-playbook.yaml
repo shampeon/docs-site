@@ -9,6 +9,7 @@ ui:
   bundle:
     # url: ../antora-ui/build/ui-bundle.zip
     url: https://github.com/shampeon/antora-ui/releases/download/nightly/ui-bundle.zip
+    snapshot: true
   # supplemental_files: ./supplemental_ui
   # default_layout: default-dev
 antora:
