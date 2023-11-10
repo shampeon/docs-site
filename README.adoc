@@ -9,7 +9,7 @@
 :url-ci-pipelines: {url-project}/actions/workflows
 :img-publish-status: {url-project}/actions/workflows/publish.yaml/badge.svg
 
-image:{img-pulish-status}[Publish Status (GitHub CI), link={url-ci-pipelines}]
+image:{img-publish-status}[Publish Status (GitHub CI), link={url-ci-pipelines}]
 
 This repo contains the {url-antora}[Antora] playbook file used to generate the {url-docs}[demo site] with information on the work history of Ian Evans, a technical writer specializing in developer documentation.
 
